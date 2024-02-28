@@ -3,55 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind in a minute</title>
+    <title>Learn Tailwind</title>
     <link href="assets/css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-slate-50">
-    <!--Header Section-->
-    <header class="w-full bg-white py-3 px-3 shadow flex justify-end items-end">
-      <button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="30"
-          viewBox="0 0 34 30"
-          fill="none"
+    <form class="w-2/6 mx-auto shadow-md py-8 px-4 mt-8 rounded-lg" id="emailForm">
+      <label class="block">
+        <span class="block text-base font-semibold text-slate-600"
+          >Username</span
         >
-          <path d="M0 1H34" stroke="black" stroke-width="2" />
-          <path d="M0 15H34" stroke="black" stroke-width="2" />
-          <path d="M0 29H34" stroke="black" stroke-width="2" />
-        </svg>
-      </button>
-    </header>
+        <input
+          type="text"
+          disabled
+          placeholder="Enter Username"
+          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none disabled:bg-slate-100 disabled:text-slate-400"
+        />
+      </label>
 
-    <section class="w-full bg-yellow-300 h-[400px] relative">
-      <div class="max-w-[1120px] mx-auto p-4">
-        <a
-          href=""
-          class="flex rounded-full bg-white items-center justify-center w-24 h-24"
-          >Logo</a
+      <label class="block mt-8">
+        <span class="block text-base font-semibold text-slate-600">Email</span>
+        <input
+          type="email"
+          placeholder="Enter Email"
+          id="emailInput"
+          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg 
+          text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none invalid:border-red-500 focus:invalid:border-red-500 invalid:text-red-500 focus:invalid:ring-red-500 peer 
+           "
+        />
+        <p id="emailError" class="mt-1 text-sm text-red-500 invisible peer-invalid:visible">Please provide a valid email address.</p>
+      </label>
+
+      <label class="block">
+        <span class="block text-base font-semibold text-slate-600"
+          >Password</span
         >
-        <h1 class="text-white text-8xl text-center font-bold">
-          Tailwind Layout
-        </h1>
+        <input
+          type="password"
+          
+          placeholder="Enter Password"
+          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none disabled:bg-slate-100 disabled:text-slate-400"
+        />
+      </label>
 
-        <button
-          class="w-32 bg-white rounded-xl py-4 flex mx-auto justify-center items-center absolute bottom-8 left-0 right-0 mx-auto"
+       <label class="block">
+
+        <div class="flex mt-8 items-center">
+          <input type="radio"
+          class="w-6 h-6 bg-gray-100 border border-gray-300 rounded-full 
+          appearance-none ring-2 ring-transparent focus:ring-indigo-500
+       checked:bg-indigo-500
+          ">
+          <span class="block text-base font-semibold ms-2 text-slate-600"
+          >Send Email</span
         >
-          Button
-        </button>
-      </div>
-    </section>
+        </div>
+       </label>
+        <label class="block mt-8">
 
-    <section class="w-full bg-white-300 relative">
-      <div class="grid max-w-[1120px] p-6 mx-auto grid-cols-3 gap-8">
-        <div class="bg-red-400 h-16"></div>
-        <div class="bg-green-400 h-16"></div>
-        <div class="bg-blue-400 h-16"></div>
-        <div class="bg-red-400 h-16"></div>
-        <div class="bg-green-400 h-16"></div>
-        <div class="bg-blue-400 h-16"></div>
-      </div>
-    </section>
+          <button class="w-auto px-7 py-2 flex bg-blue-600 rounded-md text-white text-lg mx-auto">Submit </button>
+        </label>
+    </form>
+
+    <script>
+      document
+        .getElementById("emailForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const emailInput = document.getElementById("emailInput");
+          const emailError = document.getElementById("emailError");
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const isValidEmail = emailPattern.test(emailInput.value);
+
+          // If email is invalid, show error message
+          if (!isValidEmail) {
+            emailError.classList.remove("invisible");
+            emailError.classList.add("visible");
+          } else {
+            emailError.classList.remove("visible");
+            emailError.classList.add("invisible");
+          }
+        });
+    </script>
   </body>
 </html>

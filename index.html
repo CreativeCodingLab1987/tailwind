@@ -7,83 +7,46 @@
     <link href="assets/css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-slate-50">
-    <form class="w-2/6 mx-auto shadow-md py-8 px-4 mt-8 rounded-lg" id="emailForm">
-      <label class="block">
-        <span class="block text-base font-semibold text-slate-600"
-          >Username</span
-        >
-        <input
-          type="text"
-          disabled
-          placeholder="Enter Username"
-          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none disabled:bg-slate-100 disabled:text-slate-400"
-        />
-      </label>
 
-      <label class="block mt-8">
-        <span class="block text-base font-semibold text-slate-600">Email</span>
-        <input
-          type="email"
-          placeholder="Enter Email"
-          id="emailInput"
-          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg 
-          text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none invalid:border-red-500 focus:invalid:border-red-500 invalid:text-red-500 focus:invalid:ring-red-500 peer 
-           "
-        />
-        <p id="emailError" class="mt-1 text-sm text-red-500 invisible peer-invalid:visible">Please provide a valid email address.</p>
-      </label>
+   
 
-      <label class="block">
-        <span class="block text-base font-semibold text-slate-600"
-          >Password</span
-        >
-        <input
-          type="password"
-          
-          placeholder="Enter Password"
-          class="mt-2 block w-full px-3 py-3 border border-slate-300 bg-white rounded-lg text-sm shadow-sm focus:border-blue-600 focus:ring-1 focus:outline-none disabled:bg-slate-100 disabled:text-slate-400"
-        />
-      </label>
+   <div class="px-6 custom-gradient">
 
-       <label class="block">
+    <header class="h-24 flex items-center justify-between">
 
-        <div class="flex mt-8 items-center">
-          <input type="radio"
-          class="w-6 h-6 bg-gray-100 border border-gray-300 rounded-full 
-          appearance-none ring-2 ring-transparent focus:ring-indigo-500
-       checked:bg-indigo-500
-          ">
-          <span class="block text-base font-semibold ms-2 text-slate-600"
-          >Send Email</span
-        >
-        </div>
-       </label>
-        <label class="block mt-8">
+      <a href="">
+        <img src="./assets/images/BAVAGYM.svg">
+      </a>
+      <nav class="flex text-textColor justify-between items-center w-1/2">
+        <a  href="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+  <path d="M26.9792 4.375H23.3333C23.14 4.375 22.9545 4.45182 22.8177 4.58857C22.681 4.72531 22.6042 4.91078 22.6042 5.10417V5.19021L27.7083 9.27354V5.10417C27.7083 4.91078 27.6315 4.72531 27.4948 4.58857C27.358 4.45182 27.1726 4.375 26.9792 4.375Z" fill="#A1B8C2"/>
+  <path d="M15.6771 13.8542C15.6771 13.3707 15.8691 12.907 16.211 12.5652C16.5529 12.2233 17.0165 12.0313 17.5 12.0312C17.9835 12.0313 18.4471 12.2233 18.789 12.5652C19.1309 12.907 19.3229 13.3707 19.3229 13.8542C19.3229 14.3376 19.1309 14.8013 18.789 15.1432C18.4471 15.485 17.9835 15.6771 17.5 15.6771C17.0165 15.6771 16.5529 15.485 16.211 15.1432C15.8691 14.8013 15.6771 14.3376 15.6771 13.8542Z" fill="#A1B8C2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M30.2604 15.9833L31.4008 16.8963C31.6279 17.0732 31.9155 17.1535 32.2013 17.1198C32.4872 17.086 32.7482 16.941 32.9278 16.7161C33.1074 16.4912 33.1911 16.2046 33.1608 15.9183C33.1305 15.6321 32.9886 15.3694 32.7658 15.1871L20.9169 5.70793C19.9471 4.93189 18.7421 4.50909 17.5 4.50909C16.258 4.50909 15.0529 4.93189 14.0831 5.70793L2.23417 15.1871C2.00752 15.3683 1.86214 15.6321 1.83 15.9205C1.79787 16.2089 1.88161 16.4983 2.06282 16.7249C2.24402 16.9516 2.50784 17.0969 2.79624 17.1291C3.08463 17.1612 3.37398 17.0775 3.60063 16.8963L4.73959 15.9833V30.9896H2.91667C2.62659 30.9896 2.34839 31.1048 2.14327 31.3099C1.93816 31.5151 1.82292 31.7933 1.82292 32.0833C1.82292 32.3734 1.93816 32.6516 2.14327 32.8567C2.34839 33.0619 2.62659 33.1771 2.91667 33.1771H32.0833C32.3734 33.1771 32.6516 33.0619 32.8567 32.8567C33.0619 32.6516 33.1771 32.3734 33.1771 32.0833C33.1771 31.7933 33.0619 31.5151 32.8567 31.3099C32.6516 31.1048 32.3734 30.9896 32.0833 30.9896H30.2604V15.9833ZM13.4896 13.8542C13.4896 12.7905 13.9121 11.7705 14.6642 11.0184C15.4163 10.2663 16.4364 9.84376 17.5 9.84376C18.5636 9.84376 19.5837 10.2663 20.3358 11.0184C21.0879 11.7705 21.5104 12.7905 21.5104 13.8542C21.5104 14.9178 21.0879 15.9379 20.3358 16.69C19.5837 17.4421 18.5636 17.8646 17.5 17.8646C16.4364 17.8646 15.4163 17.4421 14.6642 16.69C13.9121 15.9379 13.4896 14.9178 13.4896 13.8542ZM17.5729 19.3229C18.5413 19.3229 19.3769 19.3229 20.0463 19.4133C20.7638 19.5096 21.4506 19.7269 22.0077 20.284C22.5648 20.8411 22.7821 21.5279 22.8783 22.2454C22.9629 22.8725 22.9688 23.6454 22.9688 24.5394V30.9896H20.7813V24.7917C20.7813 23.73 20.7783 23.0417 20.7113 22.5371C20.6471 22.0631 20.545 21.9144 20.4604 21.8313C20.3773 21.7481 20.2285 21.6446 19.7546 21.5804C19.2485 21.5133 18.5617 21.5104 17.5 21.5104C16.4383 21.5104 15.75 21.5133 15.2454 21.5804C14.7715 21.6446 14.6227 21.7481 14.5396 21.8313C14.4565 21.9144 14.3529 22.0631 14.2888 22.5371C14.2217 23.0431 14.2188 23.73 14.2188 24.7917V30.9896H12.0313V24.7188C12.0313 23.7504 12.0313 22.9148 12.1217 22.2454C12.2179 21.5279 12.4352 20.8411 12.9923 20.284C13.5494 19.7269 14.2377 19.5096 14.9538 19.4133C15.6231 19.3229 16.4588 19.3229 17.4285 19.3229H17.5729Z" fill="#A1B8C2"/>
+  <path d="M15.6771 13.8542C15.6771 13.3707 15.8691 12.907 16.211 12.5652C16.5529 12.2233 17.0165 12.0313 17.5 12.0312C17.9835 12.0313 18.4471 12.2233 18.789 12.5652C19.1309 12.907 19.3229 13.3707 19.3229 13.8542C19.3229 14.3376 19.1309 14.8013 18.789 15.1432C18.4471 15.485 17.9835 15.6771 17.5 15.6771C17.0165 15.6771 16.5529 15.485 16.211 15.1432C15.8691 14.8013 15.6771 14.3376 15.6771 13.8542Z" fill="#A1B8C2"/>
+</svg>
+</a>
+<a href="">Membership</a>
+<a href="">Personal Training</a>
+<a href="">Group Classes</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
+    <section class="flex justify-between items-center py-14">
+      <div class="w-2/4">
+        <h1 class="font-bold text-6xl text-textColor leading-snug">Transform Your <span class="text-white">Body</span> , 
+Transform Your <span class="text-white">Life</span>  <br>
+at <img class="inline-block" src="./assets/images/BAVAGYM.svg"></h1>
 
-          <button class="w-auto px-7 py-2 flex bg-blue-600 rounded-md text-white text-lg mx-auto">Submit </button>
-        </label>
-    </form>
-
-    <script>
-      document
-        .getElementById("emailForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const emailInput = document.getElementById("emailInput");
-          const emailError = document.getElementById("emailError");
-
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          const isValidEmail = emailPattern.test(emailInput.value);
-
-          // If email is invalid, show error message
-          if (!isValidEmail) {
-            emailError.classList.remove("invisible");
-            emailError.classList.add("visible");
-          } else {
-            emailError.classList.remove("visible");
-            emailError.classList.add("invisible");
-          }
-        });
-    </script>
+<p class="text-textColor mt-10">Welcome to BAVA Gym, where fitness meets fun! Our state-of-the-art facilities, expert trainers, and diverse range of classes make achieving your fitness goals easier than ever.</p>
+      
+<a href="" class="w-auto hover:bg-hoverColor bg-btnColor px-5 text-white font-bold py-2 rounded-lg mt-10 inline-block">Join Now</a>
+</div>
+<div class="flex-1 flex justify-end items-end">
+  <img src="./assets/images/img1.png">
+</div>
+    </section>
+   </div>
+   
   </body>
 </html>

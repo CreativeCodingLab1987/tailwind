@@ -13,6 +13,9 @@ module.exports = {
       borderRadius: {
         "4xl": "8rem",
       },
+     screens: {
+      customBreakpoints : "1050px"
+     }
     },
   },
   plugins: [customGradients],
